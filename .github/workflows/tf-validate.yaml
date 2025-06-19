@@ -5,12 +5,12 @@ on:
             - main
 jobs:
     fmt:
-        runs-on: ubantu-latest
+        runs-on: ubantu-22.04
         name: running terraform format
         steps:
             - name: git check out
               uses: actions/checkout@v4
-              
+
             - name: terraform fmt
               uses: dflook/terraform-fmt@v2
         

@@ -45,13 +45,13 @@ resource "aws_route_table" "public" {
   }
 }
 resource "aws_eip" "eip" {
-#  count = length(aws_subnet.public1)
+  #  count = length(aws_subnet.public1)
   tags = {
     "Name" = "elastic-ip"
   }
 }
 resource "aws_nat_gateway" "natgw" {
- # count             = length(aws_subnet.public1)
+  # count             = length(aws_subnet.public1)
   connectivity_type = "public"
   subnet_id         = aws_subnet.public1.id
   allocation_id     = aws_eip.eip.id

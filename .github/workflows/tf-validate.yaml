@@ -5,7 +5,7 @@ on:
             - main
 jobs:
     fmt:
-        runs-on: ubantu-22.04
+        runs-on: ubantu-latest
         name: running terraform format
         steps:
             - name: git check out

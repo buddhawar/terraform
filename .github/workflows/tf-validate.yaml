@@ -11,4 +11,9 @@ jobs:
    steps:
      - name: Checkout the repository to the runner
        uses: actions/checkout@v2
+     - name: Terraform ci
+       uses: hashicorp/setup-terraform@v3
+
+     - name: Terraform fmt
+       run: terraform fmt -check
         

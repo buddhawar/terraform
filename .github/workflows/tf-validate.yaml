@@ -1,16 +1,14 @@
-name: terraform validate
-on: 
-    push:
-        branches:
-            - main
-jobs:
-    fmt:
-        runs-on: ubantu-latest
-        name: running terraform format
-        steps:
-            - name: git check out
-              uses: actions/checkout@v4
+name: "Terraform Infrastructure CI/CD"
+on:
+ push:
+   branches:
+   - main
 
-            - name: terraform fmt
-              uses: dflook/terraform-fmt@v2
+jobs:
+ terraform:
+   name: "Terraform Infrastructure"
+   runs-on: ubuntu-latest
+   steps:
+     - name: Checkout the repository to the runner
+       uses: actions/checkout@v2
         

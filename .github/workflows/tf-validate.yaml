@@ -29,6 +29,13 @@ jobs:
      - name: Terraform init
        run: terraform init
 
+     - name: Terraform Validate
+       run: terraform validate
+
      - name: Terraform plan
        run: terraform plan
+
+     - name: Terraform Apply
+       run: terraform apply -input=false -auto-aprove
+     
         
